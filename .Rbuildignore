@@ -12,7 +12,6 @@
 ^docs$
 ^pkgdown$
 ^cran-comments\.md$
-^news\.md$
 ^codemeta\.json$
 
 rebuild-long-running-vignettes.R

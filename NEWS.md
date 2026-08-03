@@ -19,7 +19,7 @@ model fitting functions.
 - The README describes how to install development versions from the rOpenSci
   R-universe.
 
-# galamm 0.3.0 (development versions)
+# galamm 0.4.0
 
 - Vignettes are updated to better demonstrate model checking possibilities.
 - A qqmath() function has now been added, which makes quantile-quantile plots.
