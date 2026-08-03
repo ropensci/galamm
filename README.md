@@ -19,10 +19,10 @@ coverage](https://codecov.io/gh/ropensci/galamm/branch/main/graph/badge.svg)](ht
 
 galamm estimates generalized additive latent and mixed models (GALAMMs).
 This is the first package implementing the model framework and the
-computational algorithms introduced in Sørensen, Fjell, and Walhovd
+computational algorithms introduced in Sørensen et al.
 ([2023](#ref-sorensenLongitudinalModelingAgeDependent2023)). It is an
 extension of the GLLAMM framework for multilevel latent variable
-modeling detailed in Rabe-Hesketh, Skrondal, and Pickles
+modeling detailed in Rabe-Hesketh et al.
 ([2004](#ref-rabe-heskethGeneralizedMultilevelStructural2004)) and
 Skrondal and Rabe-Hesketh
 ([2004](#ref-skrondalGeneralizedLatentVariable2004)), in particular by
@@ -56,8 +56,7 @@ feasible with popular R packages like
 2015](#ref-batesFittingLinearMixedEffects2015)), and
 [OpenMx](https://openmx.ssri.psu.edu/) ([Neale et al.
 2016](#ref-nealeOpenMxExtendedStructural2016)), as well as the Stata
-based [GLLAMM](http://www.gllamm.org/) software ([Rabe-Hesketh,
-Skrondal, and Pickles
+based [GLLAMM](http://www.gllamm.org/) software ([Rabe-Hesketh et al.
 2004](#ref-rabe-heskethGeneralizedMultilevelStructural2004),
 [2005](#ref-rabe-heskethMaximumLikelihoodEstimation2005)). In
 particular, to maximally utilize large datasets available today, it is
@@ -236,7 +235,7 @@ We finally plot the estimated smooth term.
 plot_smooth(mod)
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" alt="" width="100%" />
 
 ## How to cite this package
 
@@ -284,8 +283,7 @@ for general guidelines.
 
 ## References
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-batesFastElegantNumerical2013" class="csl-entry">
 
@@ -307,18 +305,17 @@ Statistical Software* 67 (1): 1–48.
 
 <div id="ref-lealAutodiffModernFast2018" class="csl-entry">
 
-Leal, Allan M. M. 2018. “Autodiff, a Modern, Fast and Expressive C++
-Library for Automatic Differentiation.”
+Leal, Allan M. M. 2018. *Autodiff, a Modern, Fast and Expressive C++
+Library for Automatic Differentiation*.
 
 </div>
 
 <div id="ref-nealeOpenMxExtendedStructural2016" class="csl-entry">
 
-Neale, Michael C., Michael D. Hunter, Joshua N. Pritikin, Mahsa Zahery,
-Timothy R. Brick, Robert M. Kirkpatrick, Ryne Estabrook, Timothy C.
-Bates, Hermine H. Maes, and Steven M. Boker. 2016. “OpenMx 2.0: Extended
-Structural Equation and Statistical Modeling.” *Psychometrika* 81 (2):
-535–49. <https://doi.org/10.1007/s11336-014-9435-8>.
+Neale, Michael C., Michael D. Hunter, Joshua N. Pritikin, et al. 2016.
+“OpenMx 2.0: Extended Structural Equation and Statistical Modeling.”
+*Psychometrika* 81 (2): 535–49.
+<https://doi.org/10.1007/s11336-014-9435-8>.
 
 </div>
 
@@ -334,10 +331,10 @@ Rabe-Hesketh, Sophia, Anders Skrondal, and Andrew Pickles. 2004.
 <div id="ref-rabe-heskethMaximumLikelihoodEstimation2005"
 class="csl-entry">
 
-———. 2005. “Maximum Likelihood Estimation of Limited and Discrete
-Dependent Variable Models with Nested Random Effects.” *Journal of
-Econometrics* 128 (2): 301–23.
-<https://doi.org/10.1016/j.jeconom.2004.08.017>.
+Rabe-Hesketh, Sophia, Anders Skrondal, and Andrew Pickles. 2005.
+“Maximum Likelihood Estimation of Limited and Discrete Dependent
+Variable Models with Nested Random Effects.” *Journal of Econometrics*
+128 (2): 301–23. <https://doi.org/10.1016/j.jeconom.2004.08.017>.
 
 </div>
 
@@ -362,8 +359,8 @@ Modeling.” *Journal of Statistical Software* 48 (May): 1–36.
 <div id="ref-skrondalGeneralizedLatentVariable2004" class="csl-entry">
 
 Skrondal, Anders, and Sophia Rabe-Hesketh. 2004. *Generalized Latent
-Variable Modeling*. Interdisciplinary Statistics Series. Boca Raton,
-Florida: Chapman and Hall/CRC.
+Variable Modeling*. Interdisciplinary Statistics Series. Chapman and
+Hall/CRC.
 
 </div>
 
