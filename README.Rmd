@@ -24,8 +24,8 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/galamm)](https://cran.r-project.org/package=galamm)
 [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/615_status.svg)](https://github.com/ropensci/software-review/issues/615)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-CMD-check](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LCBC-UiO/galamm?branch=main)
+[![R-CMD-check](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/ropensci/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropensci/galamm?branch=main)
 <!-- badges: end -->
 
 ```{r srr-tags1, eval = FALSE, echo = FALSE}
@@ -83,7 +83,7 @@ You can install the development version of galamm from [GitHub](https://github.c
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("LCBC-UiO/galamm")
+remotes::install_github("ropensci/galamm")
 ```
 
 ## Examples
@@ -171,6 +171,6 @@ Some parts of the code base for galamm has been derived from internal functions 
 
 ## Contributing
 
-Contributions are very welcome, see [CONTRIBUTING.md](https://github.com/LCBC-UiO/galamm/blob/main/.github/CONTRIBUTING.md) for general guidelines.
+Contributions are very welcome, see [CONTRIBUTING.md](https://github.com/ropensci/galamm/blob/main/.github/CONTRIBUTING.md) for general guidelines.
 
 ## References

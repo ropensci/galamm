@@ -15,9 +15,9 @@ Estimates generalized additive latent and mixed models using maximum marginal li
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/LCBC-UiO/galamm}
+  \item \url{https://github.com/ropensci/galamm}
   \item \url{https://lcbc-uio.github.io/galamm/}
-  \item Report bugs at \url{https://github.com/LCBC-UiO/galamm/issues}
+  \item Report bugs at \url{https://github.com/ropensci/galamm/issues}
 }
 
 }

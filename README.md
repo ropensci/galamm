@@ -12,9 +12,9 @@ Review](https://badges.ropensci.org/615_status.svg)](https://github.com/ropensci
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-CMD-check](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/LCBC-UiO/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LCBC-UiO/galamm?branch=main)
+coverage](https://codecov.io/gh/ropensci/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropensci/galamm?branch=main)
 <!-- badges: end -->
 
 galamm estimates generalized additive latent and mixed models (GALAMMs).
@@ -121,7 +121,7 @@ You can install the development version of galamm from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("LCBC-UiO/galamm")
+remotes::install_github("ropensci/galamm")
 ```
 
 ## Examples
@@ -273,7 +273,7 @@ contributor to this package, please let me know, and I will remove you.
 ## Contributing
 
 Contributions are very welcome, see
-[CONTRIBUTING.md](https://github.com/LCBC-UiO/galamm/blob/main/.github/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/ropensci/galamm/blob/main/.github/CONTRIBUTING.md)
 for general guidelines.
 
 ## References
