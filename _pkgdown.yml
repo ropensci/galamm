@@ -1,6 +1,11 @@
-url: https://lcbc-uio.github.io/galamm/
+url: https://docs.ropensci.org/galamm/
+
+# Styling is provided centrally by rOpenSci's rotemplate package, so no
+# template customisation is set here. MathJax is requested explicitly because
+# the vignettes rely heavily on LaTeX maths, which pkgdown's default MathML
+# rendering does not display reliably across browsers.
 template:
-  bootstrap: 5
+  math-rendering: mathjax
 
 articles:
 - title: Get started

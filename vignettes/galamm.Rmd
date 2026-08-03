@@ -37,7 +37,7 @@ $$
 f\left(y | \theta, \phi\right) = \exp \left( \frac{y\theta(\mu) - b\left(\theta(\mu)\right)}{\phi} + c\left(y, \phi\right) \right)
 $$
 
-here $\mu = g^{-1}(\nu)$ is the mean, $g^{-1}(\cdot)$ is the inverse of link function $g(\cdot)$, $\nu$ is a "nonlinear predictor", $\phi$ is a dispersion parameter, and $b(\cdot)$ and $c(\cdot)$ are known functions. In contrast to what is assumed, e.g., by [lme4](https://cran.r-project.org/package=lme4) [@batesFittingLinearMixedEffects2015], the functions $b(\cdot)$, $c(\cdot)$, and $g(\cdot)$ are allowed to vary between observations. That is, the observations can come from different members of the exponential family. The vignette on [models with mixed response types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html) describes this in detail.
+here $\mu = g^{-1}(\nu)$ is the mean, $g^{-1}(\cdot)$ is the inverse of link function $g(\cdot)$, $\nu$ is a "nonlinear predictor", $\phi$ is a dispersion parameter, and $b(\cdot)$ and $c(\cdot)$ are known functions. In contrast to what is assumed, e.g., by [lme4](https://cran.r-project.org/package=lme4) [@batesFittingLinearMixedEffects2015], the functions $b(\cdot)$, $c(\cdot)$, and $g(\cdot)$ are allowed to vary between observations. That is, the observations can come from different members of the exponential family. The vignette on [models with mixed response types](https://docs.ropensci.org/galamm/articles/mixed_response.html) describes this in detail.
 
 Using canonical link functions, the response model simplifies to
 
@@ -113,12 +113,12 @@ We obtain maximum marginal likelihood estimates by maximizing $L\left(\boldsymbo
 
 To see how galamm is used in practice, take a look at the vignettes describing models with different components.
 
-- [Linear mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/lmm_factor.html).
-- [Generalized linear mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/glmm_factor.html).
-- [Linear mixed models with heteroscedastic residuals](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html).
-- [Models with interactions between latent and observed covariates](https://lcbc-uio.github.io/galamm/articles/latent_observed_interaction.html).
-- [Mixed models with mixed response types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html).
-- [Generalized additive mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/semiparametric.html).
+- [Linear mixed models with factor structures](https://docs.ropensci.org/galamm/articles/lmm_factor.html).
+- [Generalized linear mixed models with factor structures](https://docs.ropensci.org/galamm/articles/glmm_factor.html).
+- [Linear mixed models with heteroscedastic residuals](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html).
+- [Models with interactions between latent and observed covariates](https://docs.ropensci.org/galamm/articles/latent_observed_interaction.html).
+- [Mixed models with mixed response types](https://docs.ropensci.org/galamm/articles/mixed_response.html).
+- [Generalized additive mixed models with factor structures](https://docs.ropensci.org/galamm/articles/semiparametric.html).
 
 
 # References

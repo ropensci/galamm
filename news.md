@@ -1,3 +1,24 @@
+# galamm 0.4.1
+
+galamm has been peer reviewed and accepted by rOpenSci, and the repository has
+moved to https://github.com/ropensci/galamm. This release contains the changes
+made during and after that review. There are no changes to the user-facing
+model fitting functions.
+
+- All links to the source repository, including the continuous integration and
+  test coverage badges, now point to the repository under the rOpenSci
+  organization.
+- The package website has moved to https://docs.ropensci.org/galamm/, and is
+  now built centrally by rOpenSci. All documentation links have been updated
+  accordingly, and the package no longer deploys a website of its own.
+- The pkgdown configuration now requests MathJax explicitly, so that the
+  mathematical notation in the vignettes renders reliably on the new website.
+- The bundled code of conduct has been removed, since rOpenSci's code of
+  conduct at https://ropensci.org/code-of-conduct/ now applies. The
+  contributing guidelines link to it instead.
+- The README describes how to install development versions from the rOpenSci
+  R-universe.
+
 # galamm 0.3.0 (development versions)
 
 - Vignettes are updated to better demonstrate model checking possibilities.

@@ -20,7 +20,7 @@ library(galamm)
 library(gamm4)
 ```
 
-This vignette describes how to use `galamm` to estimate latent variable models with smooth terms, or equivalently, generalized additive mixed models with factor structures. The examples are based on Section 4 and 5 in @sorensenLongitudinalModelingAgeDependent2023, but as we cannot share the data, we have instead simulated somewhat simpler datasets that will be used. We will gradually add complexity, starting with a simple generalized additive mixed model. Please refer to the [introductory vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html) for an overview of the statistical models.
+This vignette describes how to use `galamm` to estimate latent variable models with smooth terms, or equivalently, generalized additive mixed models with factor structures. The examples are based on Section 4 and 5 in @sorensenLongitudinalModelingAgeDependent2023, but as we cannot share the data, we have instead simulated somewhat simpler datasets that will be used. We will gradually add complexity, starting with a simple generalized additive mixed model. Please refer to the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html) for an overview of the statistical models.
 
 ## Generalized Additive Mixed Models
 
@@ -64,7 +64,7 @@ points(dat$x, dat$y, pch = 20, lwd = .05)
 
 ![Plot of data for domain 1 and item 11.](semiparametric-spaghetti-plot-1.png)
 
-We use a generalized additive mixed model with random intercepts per subject to estimate the function relating $x$ to $y$. In terms of the model framework outlined in the [introductory vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html), we model the $i$th response from the $j$th subject with
+We use a generalized additive mixed model with random intercepts per subject to estimate the function relating $x$ to $y$. In terms of the model framework outlined in the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html), we model the $i$th response from the $j$th subject with
 
 $$
 y_{ij} = f(x_{ij}) + \eta_{j} + \epsilon_{ij}

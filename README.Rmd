@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Generalized Additive Latent and Mixed Models <a href="https://lcbc-uio.github.io/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
+# Generalized Additive Latent and Mixed Models <a href="https://docs.ropensci.org/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/galamm)](https://cran.r-project.org/package=galamm)
@@ -47,7 +47,7 @@ Some typical usage examples include:
 - Analyzing data with mixed response types, e.g., when a latent trait is measured with a combination of continuous and binary responses.
 - Avoiding measurement error bias by utilizing replicate measurements of covariates of interest.
 
-To get started, take a look at the [introductory vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html).
+To get started, take a look at the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html).
 
 ## What Can the Package Do?
 
@@ -55,12 +55,12 @@ Many applications, particularly in the social sciences, require modeling capabil
 
 The goal of galamm is to enable estimation of models with an arbitrary number of grouping levels, both crossed and hierarchical, and any combination of the following features (click the links to go to the relevant vignette):
 
-- [Linear mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/lmm_factor.html).
-- [Generalized linear mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/glmm_factor.html).
-- [Linear mixed models with heteroscedastic residuals](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html).
-- [Mixed models with mixed response types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html).
-- [Generalized additive mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/semiparametric.html).
-- [Interactions between latent and observed covariates](https://lcbc-uio.github.io/galamm/articles/latent_observed_interaction.html).
+- [Linear mixed models with factor structures](https://docs.ropensci.org/galamm/articles/lmm_factor.html).
+- [Generalized linear mixed models with factor structures](https://docs.ropensci.org/galamm/articles/glmm_factor.html).
+- [Linear mixed models with heteroscedastic residuals](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html).
+- [Mixed models with mixed response types](https://docs.ropensci.org/galamm/articles/mixed_response.html).
+- [Generalized additive mixed models with factor structures](https://docs.ropensci.org/galamm/articles/semiparametric.html).
+- [Interactions between latent and observed covariates](https://docs.ropensci.org/galamm/articles/latent_observed_interaction.html).
 
 ```{r srr-tags2, eval = FALSE, echo = FALSE}
 #' @srrstats {G1.6} Code for comparing the performance of galamm to the of PLmixed for example models is provided in the vignette on linear mixed models with factor structures.
@@ -69,7 +69,7 @@ The goal of galamm is to enable estimation of models with an arbitrary number of
 
 Random effects are defined using [lme4](https://cran.r-project.org/package=lme4) syntax, and the syntax for factor structures are close to that of [PLmixed](https://cran.r-project.org/package=PLmixed) [@rockwoodEstimatingComplexMeasurement2019]. However, for the types of models supported by both PLmixed and galamm, galamm is usually considerably faster. Smooth terms, as in generalized additive mixed models, use the same syntax as [mgcv](https://cran.r-project.org/package=mgcv).
 
-For most users, it should not be necessary to think about how the actual computations are performed, although they are detailed in the [optimization vignette](https://lcbc-uio.github.io/galamm/articles/optimization.html). In short, the core computations are done using sparse matrix methods supported by [RcppEigen](https://cran.r-project.org/package=RcppEigen) [@batesFastElegantNumerical2013] and automatic differentiation using the C++ library [autodiff](https://autodiff.github.io/) [@lealAutodiffModernFast2018]. Scaling of the algorithm is investigated further in [the vignette on computational scaling](https://lcbc-uio.github.io/galamm/articles/scaling.html).
+For most users, it should not be necessary to think about how the actual computations are performed, although they are detailed in the [optimization vignette](https://docs.ropensci.org/galamm/articles/optimization.html). In short, the core computations are done using sparse matrix methods supported by [RcppEigen](https://cran.r-project.org/package=RcppEigen) [@batesFastElegantNumerical2013] and automatic differentiation using the C++ library [autodiff](https://autodiff.github.io/) [@lealAutodiffModernFast2018]. Scaling of the algorithm is investigated further in [the vignette on computational scaling](https://docs.ropensci.org/galamm/articles/scaling.html).
 
 ## Installation
 
@@ -79,7 +79,13 @@ Install the package from CRAN using
 install.packages("galamm")
 ```
 
-You can install the development version of galamm from [GitHub](https://github.com/) with:
+You can install the development version of galamm from the [rOpenSci R-universe](https://ropensci.r-universe.dev/galamm) using
+
+``` r
+install.packages("galamm", repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+or from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")

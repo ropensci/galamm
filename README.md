@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Generalized Additive Latent and Mixed Models <a href="https://lcbc-uio.github.io/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
+# Generalized Additive Latent and Mixed Models <a href="https://docs.ropensci.org/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
 
 <!-- badges: start -->
 
@@ -41,7 +41,7 @@ Some typical usage examples include:
   covariates of interest.
 
 To get started, take a look at the [introductory
-vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html).
+vignette](https://docs.ropensci.org/galamm/articles/galamm.html).
 
 ## What Can the Package Do?
 
@@ -73,17 +73,17 @@ combination of the following features (click the links to go to the
 relevant vignette):
 
 - [Linear mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/lmm_factor.html).
+  structures](https://docs.ropensci.org/galamm/articles/lmm_factor.html).
 - [Generalized linear mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/glmm_factor.html).
+  structures](https://docs.ropensci.org/galamm/articles/glmm_factor.html).
 - [Linear mixed models with heteroscedastic
-  residuals](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html).
+  residuals](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html).
 - [Mixed models with mixed response
-  types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html).
+  types](https://docs.ropensci.org/galamm/articles/mixed_response.html).
 - [Generalized additive mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/semiparametric.html).
+  structures](https://docs.ropensci.org/galamm/articles/semiparametric.html).
 - [Interactions between latent and observed
-  covariates](https://lcbc-uio.github.io/galamm/articles/latent_observed_interaction.html).
+  covariates](https://docs.ropensci.org/galamm/articles/latent_observed_interaction.html).
 
 Random effects are defined using
 [lme4](https://cran.r-project.org/package=lme4) syntax, and the syntax
@@ -98,7 +98,7 @@ mixed models, use the same syntax as
 For most users, it should not be necessary to think about how the actual
 computations are performed, although they are detailed in the
 [optimization
-vignette](https://lcbc-uio.github.io/galamm/articles/optimization.html).
+vignette](https://docs.ropensci.org/galamm/articles/optimization.html).
 In short, the core computations are done using sparse matrix methods
 supported by [RcppEigen](https://cran.r-project.org/package=RcppEigen)
 ([Bates and Eddelbuettel 2013](#ref-batesFastElegantNumerical2013)) and
@@ -106,7 +106,7 @@ automatic differentiation using the C++ library
 [autodiff](https://autodiff.github.io/) ([Leal
 2018](#ref-lealAutodiffModernFast2018)). Scaling of the algorithm is
 investigated further in [the vignette on computational
-scaling](https://lcbc-uio.github.io/galamm/articles/scaling.html).
+scaling](https://docs.ropensci.org/galamm/articles/scaling.html).
 
 ## Installation
 
@@ -116,8 +116,14 @@ Install the package from CRAN using
 install.packages("galamm")
 ```
 
-You can install the development version of galamm from
-[GitHub](https://github.com/) with:
+You can install the development version of galamm from the [rOpenSci
+R-universe](https://ropensci.r-universe.dev/galamm) using
+
+``` r
+install.packages("galamm", repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+or from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
