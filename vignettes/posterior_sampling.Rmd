@@ -21,7 +21,7 @@ library(galamm)
 
 Sampling from the empirical Bayes posterior distribution can be a convenient way of obtaining confidence bands for nonlinear functions of the estimated parameters. More background can be found in [this blog post by Gavin Simpson](https://fromthebottomoftheheap.net/2016/12/15/simultaneous-interval-revisited/) and in Section 6.10 of @woodGeneralizedAdditiveModels2017.
 
-We start by fitting a semiparametric modeling with factor structures described in the vignette on [semiparametric latent variable modeling](https://lcbc-uio.github.io/galamm/articles/mixed_response.html). To make it more interesting we only keep the first 10 subjects.
+We start by fitting a semiparametric modeling with factor structures described in the vignette on [semiparametric latent variable modeling](https://docs.ropensci.org/galamm/articles/mixed_response.html). To make it more interesting we only keep the first 10 subjects.
 
 
 ``` r

@@ -36,7 +36,7 @@ We start with the `mresp` dataset, which comes with the package. The variable "i
 head(mresp)
 ```
 
-In terms of the GALAMM defined in the [introductory vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html), and for simplicity assuming we use canonical link functions, we have the response model
+In terms of the GALAMM defined in the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html), and for simplicity assuming we use canonical link functions, we have the response model
 
 $$
 f\left(y_{ij} | \nu_{ij}, \phi\right) = \exp \left( \frac{y_{ij}\nu_{ij} - b\left(\nu_{ij}\right)}{\phi} + c\left(y_{ij}, \phi\right) \right)
@@ -101,7 +101,7 @@ summary(mixed_resp)
 
 ### Mixed Response and Heteroscedastic Residuals
 
-Mixed response models can be combined with heteroscedastic residuals, which are described in the vignette on [linear mixed models with heteroscedastic residuals](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html). However, some care is needed in this case. We illustrate with the dataset `mresp_hsced`, whose first few lines are shown below:
+Mixed response models can be combined with heteroscedastic residuals, which are described in the vignette on [linear mixed models with heteroscedastic residuals](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html). However, some care is needed in this case. We illustrate with the dataset `mresp_hsced`, whose first few lines are shown below:
 
 ```{r}
 head(mresp_hsced)

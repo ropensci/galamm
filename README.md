@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Generalized Additive Latent and Mixed Models <a href="https://lcbc-uio.github.io/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
+# Generalized Additive Latent and Mixed Models <a href="https://docs.ropensci.org/galamm/"><img src="man/figures/logo.png" align="right" height="139" alt="galamm website" /></a>
 
 <!-- badges: start -->
 
@@ -12,17 +12,17 @@ Review](https://badges.ropensci.org/615_status.svg)](https://github.com/ropensci
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-CMD-check](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LCBC-UiO/galamm/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/galamm/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/LCBC-UiO/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LCBC-UiO/galamm?branch=main)
+coverage](https://codecov.io/gh/ropensci/galamm/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropensci/galamm?branch=main)
 <!-- badges: end -->
 
 galamm estimates generalized additive latent and mixed models (GALAMMs).
 This is the first package implementing the model framework and the
-computational algorithms introduced in Sørensen, Fjell, and Walhovd
+computational algorithms introduced in Sørensen et al.
 ([2023](#ref-sorensenLongitudinalModelingAgeDependent2023)). It is an
 extension of the GLLAMM framework for multilevel latent variable
-modeling detailed in Rabe-Hesketh, Skrondal, and Pickles
+modeling detailed in Rabe-Hesketh et al.
 ([2004](#ref-rabe-heskethGeneralizedMultilevelStructural2004)) and
 Skrondal and Rabe-Hesketh
 ([2004](#ref-skrondalGeneralizedLatentVariable2004)), in particular by
@@ -41,7 +41,7 @@ Some typical usage examples include:
   covariates of interest.
 
 To get started, take a look at the [introductory
-vignette](https://lcbc-uio.github.io/galamm/articles/galamm.html).
+vignette](https://docs.ropensci.org/galamm/articles/galamm.html).
 
 ## What Can the Package Do?
 
@@ -56,8 +56,7 @@ feasible with popular R packages like
 2015](#ref-batesFittingLinearMixedEffects2015)), and
 [OpenMx](https://openmx.ssri.psu.edu/) ([Neale et al.
 2016](#ref-nealeOpenMxExtendedStructural2016)), as well as the Stata
-based [GLLAMM](http://www.gllamm.org/) software ([Rabe-Hesketh,
-Skrondal, and Pickles
+based [GLLAMM](http://www.gllamm.org/) software ([Rabe-Hesketh et al.
 2004](#ref-rabe-heskethGeneralizedMultilevelStructural2004),
 [2005](#ref-rabe-heskethMaximumLikelihoodEstimation2005)). In
 particular, to maximally utilize large datasets available today, it is
@@ -73,17 +72,17 @@ combination of the following features (click the links to go to the
 relevant vignette):
 
 - [Linear mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/lmm_factor.html).
+  structures](https://docs.ropensci.org/galamm/articles/lmm_factor.html).
 - [Generalized linear mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/glmm_factor.html).
+  structures](https://docs.ropensci.org/galamm/articles/glmm_factor.html).
 - [Linear mixed models with heteroscedastic
-  residuals](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html).
+  residuals](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html).
 - [Mixed models with mixed response
-  types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html).
+  types](https://docs.ropensci.org/galamm/articles/mixed_response.html).
 - [Generalized additive mixed models with factor
-  structures](https://lcbc-uio.github.io/galamm/articles/semiparametric.html).
+  structures](https://docs.ropensci.org/galamm/articles/semiparametric.html).
 - [Interactions between latent and observed
-  covariates](https://lcbc-uio.github.io/galamm/articles/latent_observed_interaction.html).
+  covariates](https://docs.ropensci.org/galamm/articles/latent_observed_interaction.html).
 
 Random effects are defined using
 [lme4](https://cran.r-project.org/package=lme4) syntax, and the syntax
@@ -98,7 +97,7 @@ mixed models, use the same syntax as
 For most users, it should not be necessary to think about how the actual
 computations are performed, although they are detailed in the
 [optimization
-vignette](https://lcbc-uio.github.io/galamm/articles/optimization.html).
+vignette](https://docs.ropensci.org/galamm/articles/optimization.html).
 In short, the core computations are done using sparse matrix methods
 supported by [RcppEigen](https://cran.r-project.org/package=RcppEigen)
 ([Bates and Eddelbuettel 2013](#ref-batesFastElegantNumerical2013)) and
@@ -106,7 +105,7 @@ automatic differentiation using the C++ library
 [autodiff](https://autodiff.github.io/) ([Leal
 2018](#ref-lealAutodiffModernFast2018)). Scaling of the algorithm is
 investigated further in [the vignette on computational
-scaling](https://lcbc-uio.github.io/galamm/articles/scaling.html).
+scaling](https://docs.ropensci.org/galamm/articles/scaling.html).
 
 ## Installation
 
@@ -116,12 +115,18 @@ Install the package from CRAN using
 install.packages("galamm")
 ```
 
-You can install the development version of galamm from
-[GitHub](https://github.com/) with:
+You can install the development version of galamm from the [rOpenSci
+R-universe](https://ropensci.r-universe.dev/galamm) using
+
+``` r
+install.packages("galamm", repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+or from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("LCBC-UiO/galamm")
+remotes::install_github("ropensci/galamm")
 ```
 
 ## Examples
@@ -230,7 +235,7 @@ We finally plot the estimated smooth term.
 plot_smooth(mod)
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" alt="" width="100%" />
 
 ## How to cite this package
 
@@ -273,13 +278,12 @@ contributor to this package, please let me know, and I will remove you.
 ## Contributing
 
 Contributions are very welcome, see
-[CONTRIBUTING.md](https://github.com/LCBC-UiO/galamm/blob/main/.github/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/ropensci/galamm/blob/main/.github/CONTRIBUTING.md)
 for general guidelines.
 
 ## References
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-batesFastElegantNumerical2013" class="csl-entry">
 
@@ -301,18 +305,17 @@ Statistical Software* 67 (1): 1–48.
 
 <div id="ref-lealAutodiffModernFast2018" class="csl-entry">
 
-Leal, Allan M. M. 2018. “Autodiff, a Modern, Fast and Expressive C++
-Library for Automatic Differentiation.”
+Leal, Allan M. M. 2018. *Autodiff, a Modern, Fast and Expressive C++
+Library for Automatic Differentiation*.
 
 </div>
 
 <div id="ref-nealeOpenMxExtendedStructural2016" class="csl-entry">
 
-Neale, Michael C., Michael D. Hunter, Joshua N. Pritikin, Mahsa Zahery,
-Timothy R. Brick, Robert M. Kirkpatrick, Ryne Estabrook, Timothy C.
-Bates, Hermine H. Maes, and Steven M. Boker. 2016. “OpenMx 2.0: Extended
-Structural Equation and Statistical Modeling.” *Psychometrika* 81 (2):
-535–49. <https://doi.org/10.1007/s11336-014-9435-8>.
+Neale, Michael C., Michael D. Hunter, Joshua N. Pritikin, et al. 2016.
+“OpenMx 2.0: Extended Structural Equation and Statistical Modeling.”
+*Psychometrika* 81 (2): 535–49.
+<https://doi.org/10.1007/s11336-014-9435-8>.
 
 </div>
 
@@ -328,10 +331,10 @@ Rabe-Hesketh, Sophia, Anders Skrondal, and Andrew Pickles. 2004.
 <div id="ref-rabe-heskethMaximumLikelihoodEstimation2005"
 class="csl-entry">
 
-———. 2005. “Maximum Likelihood Estimation of Limited and Discrete
-Dependent Variable Models with Nested Random Effects.” *Journal of
-Econometrics* 128 (2): 301–23.
-<https://doi.org/10.1016/j.jeconom.2004.08.017>.
+Rabe-Hesketh, Sophia, Anders Skrondal, and Andrew Pickles. 2005.
+“Maximum Likelihood Estimation of Limited and Discrete Dependent
+Variable Models with Nested Random Effects.” *Journal of Econometrics*
+128 (2): 301–23. <https://doi.org/10.1016/j.jeconom.2004.08.017>.
 
 </div>
 
@@ -356,8 +359,8 @@ Modeling.” *Journal of Statistical Software* 48 (May): 1–36.
 <div id="ref-skrondalGeneralizedLatentVariable2004" class="csl-entry">
 
 Skrondal, Anders, and Sophia Rabe-Hesketh. 2004. *Generalized Latent
-Variable Modeling*. Interdisciplinary Statistics Series. Boca Raton,
-Florida: Chapman and Hall/CRC.
+Variable Modeling*. Interdisciplinary Statistics Series. Chapman and
+Hall/CRC.
 
 </div>
 

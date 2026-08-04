@@ -33,7 +33,7 @@ At convergence, the Hessian matrix of second derivatives is computed exactly, ag
 
 ## Modifying the L-BFGS-B algorithm
 
-We will illustrate some ways of modifying the optimization procedure with the covariate measurement model example shown in the [vignette on models with mixed response types](https://lcbc-uio.github.io/galamm/articles/mixed_response.html). Here we start by simply setting up what we need to fit the model.
+We will illustrate some ways of modifying the optimization procedure with the covariate measurement model example shown in the [vignette on models with mixed response types](https://docs.ropensci.org/galamm/articles/mixed_response.html). Here we start by simply setting up what we need to fit the model.
 
 
 ``` r

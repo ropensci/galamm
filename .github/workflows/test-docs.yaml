@@ -1,0 +1,21 @@
+# The pkgdown website for galamm is built centrally by rOpenSci and published
+# at https://docs.ropensci.org/galamm/, so this package no longer deploys a
+# site of its own. This workflow runs the very same build script that rOpenSci
+# uses, so that problems with the documentation are caught here rather than
+# after merging. The rendered site is stored as a build artifact.
+#
+# See https://github.com/ropensci-org/rotemplate/ for details.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+name: Test-docs
+
+jobs:
+  Test-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ropensci-org/rotemplate@main

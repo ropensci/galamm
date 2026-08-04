@@ -31,7 +31,7 @@ n_replicates <- 20
 
 ## Linear Mixed Models with Factor Structures
 
-We start with the linear mixed model with factor structures described in [another vignette](https://lcbc-uio.github.io/galamm/articles/lmm_factor.html). Our goal here is to study how the computing time scales with the number of observations.
+We start with the linear mixed model with factor structures described in [another vignette](https://docs.ropensci.org/galamm/articles/lmm_factor.html). Our goal here is to study how the computing time scales with the number of observations.
 
 
 ``` r
@@ -128,7 +128,7 @@ abline(fit)
 
 ## Model with Group-Wise Heteroscedasticity
 
-We now consider the model with group-wise heteroscedasticity consider in [the vignette on heteroscedastic linear mixed models](https://lcbc-uio.github.io/galamm/articles/lmm_heteroscedastic.html).
+We now consider the model with group-wise heteroscedasticity consider in [the vignette on heteroscedastic linear mixed models](https://docs.ropensci.org/galamm/articles/lmm_heteroscedastic.html).
 
 There 1200 rows and 200 unique IDs in the dataset. We take subset of IDs, while keeping the remaining model structure unchanged.
 
@@ -194,7 +194,7 @@ abline(fit)
 
 ## Generalized Linear Mixed Models with Factor Structures
 
-We now consider an example described in the [vignette on generalized linear mixed models with factor structures](https://lcbc-uio.github.io/galamm/articles/glmm_factor.html).
+We now consider an example described in the [vignette on generalized linear mixed models with factor structures](https://docs.ropensci.org/galamm/articles/glmm_factor.html).
 
 
 ``` r
@@ -272,7 +272,7 @@ We speculate that this is caused by the fact that for non-Gaussian models, a pen
 
 ## Semiparametric Model with Gaussian Responses
 
-We can study the scaling issue further in semiparametric models with factor structures, which are described in [a separate vignette](https://lcbc-uio.github.io/galamm/articles/semiparametric.html).
+We can study the scaling issue further in semiparametric models with factor structures, which are described in [a separate vignette](https://docs.ropensci.org/galamm/articles/semiparametric.html).
 
 The data for domain 1 has 4,800 rows and 200 unique IDs.
 

@@ -1,6 +1,6 @@
 Package: galamm
 Title: Generalized Additive Latent and Mixed Models
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: c(
     person(given = "Øystein",
            family = "Sørensen",
@@ -29,8 +29,8 @@ Description: Estimates generalized additive latent and
     <doi:10.18637/jss.v067.i01>) and 'PLmixed' (Rockwood and Jeon (2019) 
     <doi:10.1080/00273171.2018.1516541>).
 License: GPL (>= 3)
-URL: https://github.com/LCBC-UiO/galamm, https://lcbc-uio.github.io/galamm/
-BugReports: https://github.com/LCBC-UiO/galamm/issues
+URL: https://docs.ropensci.org/galamm/, https://github.com/ropensci/galamm
+BugReports: https://github.com/ropensci/galamm/issues
 Encoding: UTF-8
 Imports: 
     gratia,

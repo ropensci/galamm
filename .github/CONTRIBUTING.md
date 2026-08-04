@@ -18,7 +18,7 @@ See our guide on [how to create a great issue](https://code-review.tidyverse.org
 
 ### Pull request process
 
-*   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("LCBC-UiO/galamm", fork = TRUE)`.
+*   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("ropensci/galamm", fork = TRUE)`.
 
 *   Install all development dependencies with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. 
     If R CMD check doesn't pass cleanly, it's a good idea to ask for help before continuing. 
@@ -43,8 +43,8 @@ See our guide on [how to create a great issue](https://code-review.tidyverse.org
 ## Code of Conduct
 
 Please note that the galamm project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
-project you agree to abide by its terms.
+[Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By
+contributing to this project you agree to abide by its terms.
 
 ## Roadmap
 
