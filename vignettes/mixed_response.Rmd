@@ -48,9 +48,9 @@ for the $i$th observation of the $j$ subject. Although we don't show this with a
 
 Next, the nonlinear predictor is given by
 
-$$\nu_{ij} = \beta_{0} + x_{ij}\beta_{1} + \mathbf{z}_{ij}^{T}\boldsymbol{\lambda} \eta$$
+$$\nu_{ij} = \beta_{0} + x_{ij}\beta_{1} + \mathbf{z}_{ij}^{T}\pmb{\lambda} \eta$$
 
-where $x_{ij}$ is an explanatory and $\mathbf{z}_{ij}$ is a dummy vector of length 2 with exactly one element equal to one and one element equal to zero. When `itemgroup = "a"`, $\mathbf{z} = (1, 0)^{T}$ and when `itemgroup = "b"`, $\mathbf{z} = (0, 1)^{T}$. The parameter $\boldsymbol{\lambda} = (1, \lambda)^{T}$ is a vector of factor loadings, whose first element equals zero for identifiability. $\eta$ is a latent variable, in this case representing an underlying trait "causing" the observed responses.
+where $x_{ij}$ is an explanatory and $\mathbf{z}_{ij}$ is a dummy vector of length 2 with exactly one element equal to one and one element equal to zero. When `itemgroup = "a"`, $\mathbf{z} = (1, 0)^{T}$ and when `itemgroup = "b"`, $\mathbf{z} = (0, 1)^{T}$. The parameter $\pmb{\lambda} = (1, \lambda)^{T}$ is a vector of factor loadings, whose first element equals zero for identifiability. $\eta$ is a latent variable, in this case representing an underlying trait "causing" the observed responses.
 
 The structural model is simply
 
@@ -60,7 +60,7 @@ $$
 
 where $N(0, \psi)$ denotes a normal distribution with mean 0 and variance $\psi$.
 
-We define the loading matrix as follows, where the value `1` indicates that the first element $\boldsymbol{\lambda}$ is fixed, and the value `NA` indicates that its second element is unknown, and to be estimated.
+We define the loading matrix as follows, where the value `1` indicates that the first element $\pmb{\lambda}$ is fixed, and the value `NA` indicates that its second element is unknown, and to be estimated.
 
 
 ``` r
@@ -235,7 +235,7 @@ diet[diet$id %in% c(219, 220, 221), ]
 
 Our first goal is to model the effect of fiber intake on risk of heart disease. Since this variable is very likely to be subject to measurement error, it is well known that simply averaging the two measurements, where available, and using the single measurement otherwise, will lead to bias and lack of power [@carrollMeasurementErrorNonlinear2006]. Instead, we let $\eta_{j}$ denote the true (latent) fiber intake of person $j$, and define the structural model
 
-$$\eta_{j} = \mathbf{x}_{ij}'\boldsymbol{\gamma} + \zeta_{j}.$$
+$$\eta_{j} = \mathbf{x}_{ij}'\pmb{\gamma} + \zeta_{j}.$$
 
 where $\mathbf{x}_{ij}$ is a vector of covariates age, bus, and their interaction, as well as a constant term for defining the intercept. The R formula for setting up the model matrix would be `model.matrix(~ age * bus, data = diet)`. The term $\zeta_{j}$ is a normally distributed disturbance, $\zeta_{j} \sim N(0, \psi)$.
 
@@ -249,16 +249,16 @@ $$y_{ij} = d_{2ij} \beta_{0} + \eta_{j} + \epsilon_{ij}, \qquad \epsilon_{ij} = 
 
 Next, for the rows corresponding to coronary heart disease measurement, we assume a binomial model with a logit link function, i.e., logistic regression. This model is given by
 
-$$\text{logit}[P(y_{ij}=1 | \eta_{j})] = \mathbf{x}_{ij}'\boldsymbol{\beta} + \lambda \eta_{j},$$
+$$\text{logit}[P(y_{ij}=1 | \eta_{j})] = \mathbf{x}_{ij}'\pmb{\beta} + \lambda \eta_{j},$$
 
-where $\mathbf{x}_{ij}$ is the same as before, but where $\boldsymbol{\beta}$ now represents the direct effect of age and bus on the probability of coronary heart disease. The factor loading $\lambda$ is the regression coefficient for latent fiber intake on the risk of coronary heart disease.
+where $\mathbf{x}_{ij}$ is the same as before, but where $\pmb{\beta}$ now represents the direct effect of age and bus on the probability of coronary heart disease. The factor loading $\lambda$ is the regression coefficient for latent fiber intake on the risk of coronary heart disease.
 
 
 ### Nonlinear Predictor
 
 Stacking the three responses, which are fiber intake at times 1 and 2, and coronary heart disease, we can define the joint model as a GLLAMM with nonlinear predictor
 
-$$\nu_{ij} = d_{2ij} \beta_{0} + d_{3ij} \mathbf{x}_{j}'\boldsymbol{\beta} + \mathbf{x}_{j}'\boldsymbol{\gamma}\left[(d_{1i} + d_{2i}) + \lambda d_{3i}\right] + \zeta_{j} \left[(d_{1i} + d_{2i}) + \lambda d_{3i}\right],$$
+$$\nu_{ij} = d_{2ij} \beta_{0} + d_{3ij} \mathbf{x}_{j}'\pmb{\beta} + \mathbf{x}_{j}'\pmb{\gamma}\left[(d_{1i} + d_{2i}) + \lambda d_{3i}\right] + \zeta_{j} \left[(d_{1i} + d_{2i}) + \lambda d_{3i}\right],$$
 
 where $d_{1i}$ is a dummy variable for fiber measurements at timepoint 1 and $d_{3i}$ is an indicator for coronary heart disease.
 
@@ -313,7 +313,7 @@ formula <- y ~ 0 + chd + (age * bus):chd + fiber +
   (age * bus):fiber + fiber2 + (0 + loading | id)
 ```
 
-The initial zero specifies that we don't want R to insert an intercept term. Next, `chd + (age * bus) : chd` applies to "chd" rows only, and corresponds to $\mathbf{x}_{ij}^{T} \boldsymbol{\beta}$ in the disease model. The part `fiber + (age * bus) : fiber` corresponds to the term $\mathbf{x}_{ij}^{T}\boldsymbol{\gamma}$ in the disease model, and `fiber2` corresponds to the drift term $d_{2ij}\beta_{0}$.
+The initial zero specifies that we don't want R to insert an intercept term. Next, `chd + (age * bus) : chd` applies to "chd" rows only, and corresponds to $\mathbf{x}_{ij}^{T} \pmb{\beta}$ in the disease model. The part `fiber + (age * bus) : fiber` corresponds to the term $\mathbf{x}_{ij}^{T}\pmb{\gamma}$ in the disease model, and `fiber2` corresponds to the drift term $d_{2ij}\beta_{0}$.
 
 We can inspect the model implied by the formula by using the `nobars` function from [lme4](https://cran.r-project.org/package=lme4) [@batesFittingLinearMixedEffects2015] to remove the random effects, and then `model.matrix`. It looks correctly set up.
 

@@ -41,13 +41,13 @@ head(IRTsim)
 Each student is identified by a student id `sid`, and each school with a school id given by the `school` variable. For each student, five item measurements have been made. We assume that the student's performance depends both on the students ability as well as on the school the student attends. Having the outline of GALAMMs from the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html) in mind, we assume a binomial response model with a logit link, yielding for the $i$th measurement of the $j$th student in the $k$th school,
 
 $$
-\text{P}(y_{ijk} = 1 | \mathbf{x}_{ijk}, \boldsymbol{\eta}_{jk}) = \frac{\exp(\nu_{ijk})}{1 + \exp(\nu_{ijk})}
+\text{P}(y_{ijk} = 1 | \mathbf{x}_{ijk}, \pmb{\eta}_{jk}) = \frac{\exp(\nu_{ijk})}{1 + \exp(\nu_{ijk})}
 $$
 
-The latent variable vector is given by $\boldsymbol{\eta}_{jk} = (\eta_{j}, \eta_{jk})^{T}$, where the last element is the effect of the school which the $j$th student attends. The nonlinear predictor is given by
+The latent variable vector is given by $\pmb{\eta}_{jk} = (\eta_{j}, \eta_{jk})^{T}$, where the last element is the effect of the school which the $j$th student attends. The nonlinear predictor is given by
 
 $$
-\nu_{ijk} = \mathbf{x}_{ijk}^{T} \boldsymbol{\beta} + \mathbf{x}_{ijk}^{T}\boldsymbol{\lambda} (\eta_{j} + \eta_{jk})
+\nu_{ijk} = \mathbf{x}_{ijk}^{T} \pmb{\beta} + \mathbf{x}_{ijk}^{T}\pmb{\lambda} (\eta_{j} + \eta_{jk})
 $$
 
 where $\mathbf{x}_{ij}$ is a vector containing dummy variables for items, $\eta_{j}$ is a latent variable describing the underlying ability of student $j$, and $\eta_{k}$ is a latent variable describing the effect of school $k$. The factor loading $\lambda$ describes how the sum of the two latent variables impacts the nonlinear predictor, and hence the probability of correct response. We note that using a common $\lambda$ for two latent variables like this is not necessarily a good model, but it makes this introductory example easier to follow. We will extend the model later.
@@ -55,22 +55,22 @@ where $\mathbf{x}_{ij}$ is a vector containing dummy variables for items, $\eta_
 The structural model is simply
 
 $$
-\boldsymbol{\eta}_{jk} = \boldsymbol{\zeta}_{jk} \sim N_{2}(\mathbf{0}, \boldsymbol{\Psi}),
+\pmb{\eta}_{jk} = \pmb{\zeta}_{jk} \sim N_{2}(\mathbf{0}, \pmb{\Psi}),
 $$
 
-where $N(\mathbf{0}, \boldsymbol{\Psi})$ denotes a bivariate normal distribution with mean zero covariance matrix $\boldsymbol{\Psi}$. The covariance matrix is assumed to be diagonal.
+where $N(\mathbf{0}, \pmb{\Psi})$ denotes a bivariate normal distribution with mean zero covariance matrix $\pmb{\Psi}$. The covariance matrix is assumed to be diagonal.
 
 ```{r}
 IRTsim$item <- factor(IRTsim$item)
 ```
 
-We confirm that `item` has five levels. This means that $\boldsymbol{\lambda}$ is a vector with five elements.
+We confirm that `item` has five levels. This means that $\pmb{\lambda}$ is a vector with five elements.
 
 ```{r}
 table(IRTsim$item)
 ```
 
-For identifiability, we fix the first element of $\boldsymbol{\lambda}$ to one. The rest will be freely estimated. We do this by defining the following matrix. Any numeric value implies that the element is fixed, whereas `NA` implies that the element is unknown, and will be estimated.
+For identifiability, we fix the first element of $\pmb{\lambda}$ to one. The rest will be freely estimated. We do this by defining the following matrix. Any numeric value implies that the element is fixed, whereas `NA` implies that the element is unknown, and will be estimated.
 
 ```{r}
 (loading_matrix <- matrix(c(1, NA, NA, NA, NA), ncol = 1))
@@ -89,7 +89,7 @@ mod <- galamm(
 )
 ```
 
-A couple of things in the model formula are worth pointing out. First the part `(0 + ability | school / sid)` in the model formula specifies that student ability varies between students within schools. It corresponds to the term $\mathbf{x}_{ijk}^{T}\boldsymbol{\lambda} (\eta_{j} + \eta_{jk})$ in the mathematical specification of the model. The variable `ability` is not part of the `IRTsim` dataframe, but is instead specified in the argument `factor = "ability"`. The argument `load_var = "item"` specifies that all rows in the dataframe with the same value of "item" should get the same element of $\boldsymbol{\lambda}$, and hence it defines the dummy variable $\mathbf{x}_{ijk}$. Finally, `lambda = loading_matrix` provides the matrix of factor loadings. Note that we must explicitly add a zero in `(0 + ability | school / sid)` to avoid having a random intercept estimated in addition to the effect for each value of "item"; such a model would not be identified. The fixed effect part of the model formula, which is simply `item`, specifies the term $\mathbf{x}_{ijk}^{T} \boldsymbol{\beta}$.
+A couple of things in the model formula are worth pointing out. First the part `(0 + ability | school / sid)` in the model formula specifies that student ability varies between students within schools. It corresponds to the term $\mathbf{x}_{ijk}^{T}\pmb{\lambda} (\eta_{j} + \eta_{jk})$ in the mathematical specification of the model. The variable `ability` is not part of the `IRTsim` dataframe, but is instead specified in the argument `factor = "ability"`. The argument `load_var = "item"` specifies that all rows in the dataframe with the same value of "item" should get the same element of $\pmb{\lambda}$, and hence it defines the dummy variable $\mathbf{x}_{ijk}$. Finally, `lambda = loading_matrix` provides the matrix of factor loadings. Note that we must explicitly add a zero in `(0 + ability | school / sid)` to avoid having a random intercept estimated in addition to the effect for each value of "item"; such a model would not be identified. The fixed effect part of the model formula, which is simply `item`, specifies the term $\mathbf{x}_{ijk}^{T} \pmb{\beta}$.
 
 We can start by inspecting the fitted model:
 

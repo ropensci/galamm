@@ -22,7 +22,7 @@ library(galamm)
 At the moment, galamm supports group-wise heteroscedasticity in Gaussian response models. Referring to the model formulation outlined in the [introductory vignette](https://docs.ropensci.org/galamm/articles/galamm.html), the response model and nonlinear predictor can be easily combined in this particular case, to give
 
 $$
-y_{i} = \sum_{s=1}^{S} f_{s}\left(\mathbf{x}_{i}\right) + \sum_{l=2}^{L}\sum_{m=1}^{M_{l}} \eta_{m}^{(l)} \mathbf{z}^{(l)}_{im}{}^{'}\boldsymbol{\lambda}_{m}^{(l)} + \epsilon_{g(i)},
+y_{i} = \sum_{s=1}^{S} f_{s}\left(\mathbf{x}_{i}\right) + \sum_{l=2}^{L}\sum_{m=1}^{M_{l}} \eta_{m}^{(l)} \mathbf{z}^{(l)}_{im}{}^{'}\pmb{\lambda}_{m}^{(l)} + \epsilon_{g(i)},
 $$
 
 where subscript $i$ refers to the $i$th elementary unit of observation, i.e., the $i$th row in the dataframe. $g(i)$ refers to the group to which the $i$th observation belongs, with each grouping having a separately estimated residual variance, $\epsilon_{g} \sim N(0, \sigma_{g}^{2})$.
