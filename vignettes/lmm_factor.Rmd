@@ -55,10 +55,10 @@ levels(KYPSsim$time)
 Since students attending a given middle school not necessarily attend the same high school, we have a model with crossed random effects. We use the model of @jeonProfileLikelihoodApproachEstimating2012, whose measurement part can be formulated as
 
 $$
-y_{tsmh} = \beta_{0} + \sum_{t'=2}^{4} d_{tt'}\beta_{t'} + \mathbf{d}_{t}^{T} \left(\boldsymbol{\lambda}_{m}  \eta_{m} + \boldsymbol{\lambda}_{h}  \eta_{h}\right) + \eta_{s} + \epsilon_{tsmh},
+y_{tsmh} = \beta_{0} + \sum_{t'=2}^{4} d_{tt'}\beta_{t'} + \mathbf{d}_{t}^{T} \left(\pmb{\lambda}_{m}  \eta_{m} + \pmb{\lambda}_{h}  \eta_{h}\right) + \eta_{s} + \epsilon_{tsmh},
 $$
 
-where $\mathbf{d}_{t} = (d_{t1},d_{t2},d_{t3},d_{t4})^{T}$ is a vector whose $t$th element equals one and all other elements equal zero. $\beta_{0}$ is an intercept, and $\beta_{2}$, $\beta_{3}$, and $\beta_{4}$ are the effects of timepoints 2, 3, and 4. $\eta_{m}$ and $\eta_{h}$ are the "teacher effects" of middle school $m$ and high school $s$, respectively, $\eta_{s}$ is the latent level for student $s$, and $\epsilon_{tsmh}$ is a residual term. $\boldsymbol{\lambda}_{m}$ and $\boldsymbol{\lambda}_{h}$ are factor loadings (called "persistence parameters" by @mccaffreyModelsValueAddedModeling2004 and @jeonProfileLikelihoodApproachEstimating2012) specifying how the teacher effects for middle school and high school impact the self esteem measurement. Since students attend high school after middle school, the measurements of self esteem in middle school are assumed not to be affected by high school, and hence the first two elements of $\boldsymbol{\lambda}_{h}$ are set to zero. The first nonzero element is set to zero for identifiability, so we have $\boldsymbol{\lambda}_{h} = (0, 0, 1, \lambda_{h4})^{T}$. Conversely, we allow for middle school to have an effect of measurements in high school, so $\boldsymbol{\lambda}_{m} = (1, \lambda_{m2}, \lambda_{m3}, \lambda_{m4})^{T}$, with the first element set to zero for identifiability. The residuals are assumed normally distributed, $\epsilon_{tsmh} \sim N(0, \phi)$.
+where $\mathbf{d}_{t} = (d_{t1},d_{t2},d_{t3},d_{t4})^{T}$ is a vector whose $t$th element equals one and all other elements equal zero. $\beta_{0}$ is an intercept, and $\beta_{2}$, $\beta_{3}$, and $\beta_{4}$ are the effects of timepoints 2, 3, and 4. $\eta_{m}$ and $\eta_{h}$ are the "teacher effects" of middle school $m$ and high school $s$, respectively, $\eta_{s}$ is the latent level for student $s$, and $\epsilon_{tsmh}$ is a residual term. $\pmb{\lambda}_{m}$ and $\pmb{\lambda}_{h}$ are factor loadings (called "persistence parameters" by @mccaffreyModelsValueAddedModeling2004 and @jeonProfileLikelihoodApproachEstimating2012) specifying how the teacher effects for middle school and high school impact the self esteem measurement. Since students attend high school after middle school, the measurements of self esteem in middle school are assumed not to be affected by high school, and hence the first two elements of $\pmb{\lambda}_{h}$ are set to zero. The first nonzero element is set to zero for identifiability, so we have $\pmb{\lambda}_{h} = (0, 0, 1, \lambda_{h4})^{T}$. Conversely, we allow for middle school to have an effect of measurements in high school, so $\pmb{\lambda}_{m} = (1, \lambda_{m2}, \lambda_{m3}, \lambda_{m4})^{T}$, with the first element set to zero for identifiability. The residuals are assumed normally distributed, $\epsilon_{tsmh} \sim N(0, \phi)$.
 
 Written out for each of the four timepoints, the model becomes
 
@@ -97,7 +97,7 @@ $$
 
 where $N_{3}(a, b)$ denotes a trivariate normal distribution with mean $a$ and covariance $b$.
 
-In order to fit the model with galamm, we use syntax similar to PLmixed, and start by defining the loading matrix. The first column contains $\boldsymbol{\lambda}_{m}$ and the second column contains $\boldsymbol{\lambda}_{h}$. Numerical values in this matrix means that the entry is fixed to the given value, whereas `NA` means that the value is unknown, and should be estimated.
+In order to fit the model with galamm, we use syntax similar to PLmixed, and start by defining the loading matrix. The first column contains $\pmb{\lambda}_{m}$ and the second column contains $\pmb{\lambda}_{h}$. Numerical values in this matrix means that the entry is fixed to the given value, whereas `NA` means that the value is unknown, and should be estimated.
 
 
 
@@ -227,7 +227,7 @@ plot(mod, abline = c(0, 0))
 
 ![Diagnostic plot for linear mixed model with factor structures.](lmm_factor_diagnostic_plot-1.png)
 
-We can also compare the estimated model to a model with constrained factor loadings. In particular, we could assume that the teacher effect in middle school has no effect on self esteem measured during high school, by setting the last two elements of $\boldsymbol{\lambda}_{m}$ to zero. We would then have the following loading matrix.
+We can also compare the estimated model to a model with constrained factor loadings. In particular, we could assume that the teacher effect in middle school has no effect on self esteem measured during high school, by setting the last two elements of $\pmb{\lambda}_{m}$ to zero. We would then have the following loading matrix.
 
 
 ``` r
@@ -414,7 +414,7 @@ y_{12tsc} \\
 \eta_{6s}^{(s)} \\
 \eta_{7c}^{(c)} \\
 \end{pmatrix} +
-\boldsymbol{\epsilon}_{tsc}
+\pmb{\epsilon}_{tsc}
 $$
 
 In brief, $\eta_{1t}^{(t)}$ and $\eta_{2t}^{(t)}$ are the teacher effects, $\eta_{3s}^{(s)}$ and $\eta_{4s}^{(s)}$ are teacher's perception of the students on the trait, $\eta_{5s}^{(s)}$ and $\eta_{6s}^{(s)}$ are the students' perception of themselves on the trait, and $\eta_{7c}^{(c)}$ is the classroom effect. The factor loadings are the "regression coefficients" for regressing the observed items onto these latent traits. The subscripts $t$, $s$, and $c$ indicate teacher, student, and class, respectively.
@@ -450,7 +450,7 @@ $$
 \zeta_{1t}^{(t)} \\
 \zeta_{2t}^{(t)} \\
 \end{pmatrix}
-\sim N_{2}(\mathbf{0}, \boldsymbol{\Psi}^{(t)}),
+\sim N_{2}(\mathbf{0}, \pmb{\Psi}^{(t)}),
 $$
 
 $$
@@ -460,7 +460,7 @@ $$
 \zeta_{5s}^{(s)} \\
 \zeta_{6s}^{(s)} \\
 \end{pmatrix}
-\sim N_{4}(\mathbf{0}, \boldsymbol{\Psi}^{(s)}),
+\sim N_{4}(\mathbf{0}, \pmb{\Psi}^{(s)}),
 $$
 
 $$

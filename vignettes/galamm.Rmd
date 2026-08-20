@@ -50,16 +50,16 @@ $$
 Next, the nonlinear predictor, which corresponds to the measurement model in a classical structural equation model, is defined by
 
 $$
-\nu = \sum_{s=1}^{S} f_{s}\left(\mathbf{x}\right) + \sum_{l=2}^{L}\sum_{m=1}^{M_{l}} \eta_{m}^{(l)} \mathbf{z}^{(l)}_{m}{}^{'}\boldsymbol{\lambda}_{m}^{(l)},
+\nu = \sum_{s=1}^{S} f_{s}\left(\mathbf{x}\right) + \sum_{l=2}^{L}\sum_{m=1}^{M_{l}} \eta_{m}^{(l)} \mathbf{z}^{(l)}_{m}{}^{'}\pmb{\lambda}_{m}^{(l)},
 $$
 
-where $\mathbf{x}$ are explanatory variables, $f_{s}(\mathbf{x})$, $s=1,\dots,S$ are smooth functions, $\eta_{m}^{(l)}$ are latent variables varying at level $l$, and $\boldsymbol{\lambda}_{m}^{(l)}{}^{T} \mathbf{z}_{m}^{(l)}$ is the weighted sum of a vector of explanatory variables $\mathbf{z}_{m}^{(l)}$ varying at level $l$ and parameters $\boldsymbol{\lambda}_{m}^{(l)}$. Let
+where $\mathbf{x}$ are explanatory variables, $f_{s}(\mathbf{x})$, $s=1,\dots,S$ are smooth functions, $\eta_{m}^{(l)}$ are latent variables varying at level $l$, and $\pmb{\lambda}_{m}^{(l)}{}^{T} \mathbf{z}_{m}^{(l)}$ is the weighted sum of a vector of explanatory variables $\mathbf{z}_{m}^{(l)}$ varying at level $l$ and parameters $\pmb{\lambda}_{m}^{(l)}$. Let
 
-$$\boldsymbol{\eta}^{(l)} = [\eta_{1}^{(l)}, \dots, \eta_{M_{l}}^{(l)}]^{T} \in \mathbb{R}^{M_{l}}$$ 
+$$\pmb{\eta}^{(l)} = [\eta_{1}^{(l)}, \dots, \eta_{M_{l}}^{(l)}]^{T} \in \mathbb{R}^{M_{l}}$$ 
 
 be the vector of all latent variables at level $l$, and 
 
-$$\boldsymbol{\eta} = [\boldsymbol{\eta}^{(2)}, \dots, \boldsymbol{\eta}^{(L)}]^{T} \in \mathbb{R}^{M}$$ 
+$$\pmb{\eta} = [\pmb{\eta}^{(2)}, \dots, \pmb{\eta}^{(L)}]^{T} \in \mathbb{R}^{M}$$ 
 
 the vector of all latent variables belonging to a given level-2 unit, where $M = \sum_{l=2}^{L} M_{l}$. The word "level" is here used to denote a grouping level; they are not necessarily hierarchical.
 
@@ -68,12 +68,12 @@ the vector of all latent variables belonging to a given level-2 unit, where $M =
 The structural model specifies how the latent variables are related to each other and to observed variables, and is given by
 
 $$
-\boldsymbol{\eta} = \mathbf{B}\boldsymbol{\eta} + \mathbf{h}\left(\mathbf{w}\right)
-+ \boldsymbol{\zeta}
+\pmb{\eta} = \mathbf{B}\pmb{\eta} + \mathbf{h}\left(\mathbf{w}\right)
++ \pmb{\zeta}
 $$
 
 
-where $\mathbf{B}$ is an $M \times M$ matrix of regression coefficients for regression among latent variables and $\mathbf{w} \in \mathbb{R}^{Q}$ is a vector of $Q$ predictors for the latent variables. $\mathbf{h}(\mathbf{w}) = [\mathbf{h}_{2}(\mathbf{w}), \dots, \mathbf{h}_{L}(\mathbf{w})] \in \mathbb{R}^{M}$ is a vector of smooth functions whose components $\mathbf{h}_{l}(\mathbf{w}) \in \mathbb{R}^{M_{l}}$ are vectors of functions predicting the latent variables varying at level $l$, and depending on a subset of the elements $\mathbf{w}$. $\boldsymbol{\zeta}$ is a vector of normally distributed random effects, $\boldsymbol{\zeta}^{(l)} \sim N(\mathbf{0}, \boldsymbol{\Psi}^{(l)})$ for $l=2,\dots,L$, where $\boldsymbol{\Psi}^{(l)} \in \mathbb{R}^{M_{l} \times M_{l}}$ is the covariance matrix of random effects at level $l$. Defining the $M \times M$ covariance matrix $\boldsymbol{\Psi} = \text{diag}(\boldsymbol{\Psi}^{(2)}, \dots, \boldsymbol{\Psi}^{(L)})$, we also have $\boldsymbol{\zeta} \sim N(\mathbf{0}, \boldsymbol{\Psi})$. 
+where $\mathbf{B}$ is an $M \times M$ matrix of regression coefficients for regression among latent variables and $\mathbf{w} \in \mathbb{R}^{Q}$ is a vector of $Q$ predictors for the latent variables. $\mathbf{h}(\mathbf{w}) = [\mathbf{h}_{2}(\mathbf{w}), \dots, \mathbf{h}_{L}(\mathbf{w})] \in \mathbb{R}^{M}$ is a vector of smooth functions whose components $\mathbf{h}_{l}(\mathbf{w}) \in \mathbb{R}^{M_{l}}$ are vectors of functions predicting the latent variables varying at level $l$, and depending on a subset of the elements $\mathbf{w}$. $\pmb{\zeta}$ is a vector of normally distributed random effects, $\pmb{\zeta}^{(l)} \sim N(\mathbf{0}, \pmb{\Psi}^{(l)})$ for $l=2,\dots,L$, where $\pmb{\Psi}^{(l)} \in \mathbb{R}^{M_{l} \times M_{l}}$ is the covariance matrix of random effects at level $l$. Defining the $M \times M$ covariance matrix $\pmb{\Psi} = \text{diag}(\pmb{\Psi}^{(2)}, \dots, \pmb{\Psi}^{(L)})$, we also have $\pmb{\zeta} \sim N(\mathbf{0}, \pmb{\Psi})$. 
 
 ## Mixed Model Representation
 
@@ -90,24 +90,24 @@ In galamm we use the same transformations as the [gamm4](https://CRAN.R-project.
 In mixed model representation, the nonlinear predictor can be written on the form
 
 $$
-\boldsymbol{\nu} = \mathbf{X}(\boldsymbol{\lambda}, \mathbf{B}) \boldsymbol{\beta} +  \mathbf{Z}(\boldsymbol{\lambda}, \mathbf{B}) \boldsymbol{\zeta}
+\pmb{\nu} = \mathbf{X}(\pmb{\lambda}, \mathbf{B}) \pmb{\beta} +  \mathbf{Z}(\pmb{\lambda}, \mathbf{B}) \pmb{\zeta}
 $$
 
-where $\mathbf{X}(\boldsymbol{\lambda}, \mathbf{B})$ is the regression matrix for fixed effects $\boldsymbol{\beta}$ and $\mathbf{Z}(\boldsymbol{\lambda}, \mathbf{B})$ is the regression matrix for random effects $\boldsymbol{\zeta}$. In contrast to with generalized linear mixed models, however, both matrices will in general depend on factor loadings $\boldsymbol{\lambda}$ and regression coefficients between latent variables $\mathbf{B}$. Both of these are parameters that need to be estimated, and hence $\mathbf{X}(\boldsymbol{\lambda}, \mathbf{B})$ and $\boldsymbol{\beta}$ and $\mathbf{Z}(\boldsymbol{\lambda}, \mathbf{B})$ need to be updated throughout the estimation process.
+where $\mathbf{X}(\pmb{\lambda}, \mathbf{B})$ is the regression matrix for fixed effects $\pmb{\beta}$ and $\mathbf{Z}(\pmb{\lambda}, \mathbf{B})$ is the regression matrix for random effects $\pmb{\zeta}$. In contrast to with generalized linear mixed models, however, both matrices will in general depend on factor loadings $\pmb{\lambda}$ and regression coefficients between latent variables $\mathbf{B}$. Both of these are parameters that need to be estimated, and hence $\mathbf{X}(\pmb{\lambda}, \mathbf{B})$ and $\pmb{\beta}$ and $\mathbf{Z}(\pmb{\lambda}, \mathbf{B})$ need to be updated throughout the estimation process.
 
 ### Evaluating the Marginal Likelihood
 
 Plugging the nonlinear predictor into the structural model, we obtain the joint likelihood for the model. We then obtain the marginal likelihood by integrating over the random effects, yielding a marginal likelihood function of the form
 
 $$
-L\left(\boldsymbol{\beta}, \boldsymbol{\Lambda}, \boldsymbol{\Gamma}, \boldsymbol{\lambda}, \mathbf{B}, \boldsymbol{\phi}\right) =  \left(2 \pi \phi_{1}\right)^{-r/2}  \int_{\mathbb{R}^{r}} \exp\left( g\left(\boldsymbol{\beta}, \boldsymbol{\Lambda}, \boldsymbol{\Gamma}, \boldsymbol{\lambda}, \mathbf{B}, \boldsymbol{\phi}, \mathbf{u}\right) \right) \text{d} \mathbf{u}
+L\left(\pmb{\beta}, \pmb{\Lambda}, \pmb{\Gamma}, \pmb{\lambda}, \mathbf{B}, \pmb{\phi}\right) =  \left(2 \pi \phi_{1}\right)^{-r/2}  \int_{\mathbb{R}^{r}} \exp\left( g\left(\pmb{\beta}, \pmb{\Lambda}, \pmb{\Gamma}, \pmb{\lambda}, \mathbf{B}, \pmb{\phi}, \mathbf{u}\right) \right) \text{d} \mathbf{u}
 $$
 
-where $\mathbf{u}$ is a standardized version of $\boldsymbol{\zeta}$. In order to evaluate the marginal likelihood at a given set of parameter values, we use the Laplace approximation combined with sparse matrix operations, extending @batesFittingLinearMixedEffects2015's algorithm for linear mixed models.
+where $\mathbf{u}$ is a standardized version of $\pmb{\zeta}$. In order to evaluate the marginal likelihood at a given set of parameter values, we use the Laplace approximation combined with sparse matrix operations, extending @batesFittingLinearMixedEffects2015's algorithm for linear mixed models.
 
 ### Maximizing the Marginal Likelihood
 
-We obtain maximum marginal likelihood estimates by maximizing $L\left(\boldsymbol{\beta}, \boldsymbol{\Lambda}, \boldsymbol{\Gamma}, \boldsymbol{\lambda}, \mathbf{B}, \boldsymbol{\phi}\right)$, subject to possible constraints, e.g., that variances are non-negative. For this, we use the L-BFGS-B algorithm implement in `stats::optim`. The predicted values of random effects, $\widehat{\mathbf{u}}$ are obtained as posterior modes at the final estimates.
+We obtain maximum marginal likelihood estimates by maximizing $L\left(\pmb{\beta}, \pmb{\Lambda}, \pmb{\Gamma}, \pmb{\lambda}, \mathbf{B}, \pmb{\phi}\right)$, subject to possible constraints, e.g., that variances are non-negative. For this, we use the L-BFGS-B algorithm implement in `stats::optim`. The predicted values of random effects, $\widehat{\mathbf{u}}$ are obtained as posterior modes at the final estimates.
 
 ## Example Models 
 
