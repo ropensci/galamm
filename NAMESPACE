@@ -72,6 +72,11 @@ importFrom(stats,
   fitted,
   formula,
   gaussian,
-  logLik
+  logLik,
+  nobs,
+  predict,
+  residuals,
+  sigma,
+  vcov
 )
 useDynLib(galamm, .registration = TRUE)
