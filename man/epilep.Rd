@@ -36,7 +36,7 @@ the dataset is used.
 \insertAllCited{}
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{diet}},
 \code{\link{hsced}},

@@ -216,10 +216,10 @@ summary(mod)
 \insertAllCited{}
 }
 \seealso{
-Other modeling functions: 
+Other modeling functions:
 \code{\link{galammObject}},
-\code{\link{gfam}()},
-\code{\link{s}()},
-\code{\link{t2}()}
+\code{\link[=gfam]{gfam()}},
+\code{\link{s}},
+\code{\link{t2}}
 }
 \concept{modeling functions}

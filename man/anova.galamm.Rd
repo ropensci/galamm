@@ -44,12 +44,12 @@ anova(count_mod, count_mod0)
 \code{\link[=summary.galamm]{summary.galamm()}} for the summary method and \code{\link[=anova]{anova()}} for the
 generic function.
 
-Other summary functions: 
-\code{\link{draw.galamm}()},
-\code{\link{plot_smooth.galamm}()},
-\code{\link{print.galamm}()},
-\code{\link{print.summary.galamm}()},
-\code{\link{summary.galamm}()}
+Other summary functions:
+\code{\link[=draw.galamm]{draw.galamm()}},
+\code{\link[=plot_smooth.galamm]{plot_smooth.galamm()}},
+\code{\link[=print.galamm]{print.galamm()}},
+\code{\link[=print.summary.galamm]{print.summary.galamm()}},
+\code{\link[=summary.galamm]{summary.galamm()}}
 }
 \author{
 Some of the source code for this function is adapted from

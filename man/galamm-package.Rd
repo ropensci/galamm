@@ -24,6 +24,11 @@ Useful links:
 \author{
 \strong{Maintainer}: Øystein Sørensen \email{oystein.sorensen@psykologi.uio.no} (\href{https://orcid.org/0000-0003-0724-3542}{ORCID})
 
+Authors:
+\itemize{
+  \item Øystein Sørensen \email{oystein.sorensen@psykologi.uio.no} (\href{https://orcid.org/0000-0003-0724-3542}{ORCID})
+}
+
 Other contributors:
 \itemize{
   \item Douglas Bates [contributor]

@@ -213,9 +213,9 @@ We can look at the factor loadings specifically using the `factor_loadings` func
 factor_loadings(mod)
 #>                 ms        SE       hs        SE
 #> lambda1 1.00000000        NA 0.000000        NA
-#> lambda2 0.87509307 0.1421073 0.000000        NA
-#> lambda3 0.04431739 0.1495679 1.000000        NA
-#> lambda4 0.02093662 0.1542824 1.501574 0.5040218
+#> lambda2 0.87509320 0.1421073 0.000000        NA
+#> lambda3 0.04431744 0.1495679 1.000000        NA
+#> lambda4 0.02093667 0.1542824 1.501574 0.5040217
 ```
 
 A diagnostic plot of residuals versus predicted values also looks acceptable, although there seems to be a slight upward trend.
@@ -569,43 +569,30 @@ summary(judge_galamm)
 #> -3.8407 -0.6439  0.0017  0.6474  3.9799 
 #> 
 #> Lambda:
-#>          teacher1      SE teacher2      SE trait1.t      SE trait2.t      SE trait1.s      SE trait2.s
-#> lambda1    1.0000       .        .       .    1.000       .        .       .        .       .        .
-#> lambda2    1.1278 0.03584        .       .    1.092 0.02172        .       .        .       .        .
-#> lambda3    0.9986 0.03345        .       .    1.066 0.02144        .       .        .       .        .
-#> lambda4         .       .   1.0000       .        .       .   1.0000       .        .       .        .
-#> lambda5         .       .   0.9725 0.03036        .       .   1.0536 0.02576        .       .        .
-#> lambda6         .       .   1.2191 0.03436        .       .   0.9581 0.02460        .       .        .
-#> lambda7         .       .        .       .        .       .        .       .    1.000       .        .
-#> lambda8         .       .        .       .        .       .        .       .    1.322 0.06109        .
-#> lambda9         .       .        .       .        .       .        .       .    1.145 0.05633        .
-#> lambda10        .       .        .       .        .       .        .       .        .       .    1.000
-#> lambda11        .       .        .       .        .       .        .       .        .       .    0.874
-#> lambda12        .       .        .       .        .       .        .       .        .       .    1.096
-#>               SE
-#> lambda1        .
-#> lambda2        .
-#> lambda3        .
-#> lambda4        .
-#> lambda5        .
-#> lambda6        .
-#> lambda7        .
-#> lambda8        .
-#> lambda9        .
-#> lambda10       .
-#> lambda11 0.04417
-#> lambda12 0.04874
+#>          teacher1      SE teacher2      SE trait1.t      SE trait2.t      SE trait1.s      SE trait2.s      SE
+#> lambda1    1.0000       .        .       .    1.000       .        .       .        .       .        .       .
+#> lambda2    1.1278 0.03584        .       .    1.092 0.02172        .       .        .       .        .       .
+#> lambda3    0.9986 0.03345        .       .    1.066 0.02144        .       .        .       .        .       .
+#> lambda4         .       .   1.0000       .        .       .   1.0000       .        .       .        .       .
+#> lambda5         .       .   0.9725 0.03036        .       .   1.0536 0.02576        .       .        .       .
+#> lambda6         .       .   1.2191 0.03436        .       .   0.9581 0.02460        .       .        .       .
+#> lambda7         .       .        .       .        .       .        .       .    1.000       .        .       .
+#> lambda8         .       .        .       .        .       .        .       .    1.322 0.06109        .       .
+#> lambda9         .       .        .       .        .       .        .       .    1.145 0.05633        .       .
+#> lambda10        .       .        .       .        .       .        .       .        .       .    1.000       .
+#> lambda11        .       .        .       .        .       .        .       .        .       .    0.874 0.04417
+#> lambda12        .       .        .       .        .       .        .       .        .       .    1.096 0.04874
 #> 
 #> Random effects:
-#>  Groups   Name        Variance Std.Dev. Corr          
-#>  stu      trait1.t    0.24025  0.4902                 
-#>           trait2.t    0.16872  0.4108   0.86          
-#>           trait1.s    0.29588  0.5439   0.46 0.40     
-#>           trait2.s    0.37690  0.6139   0.20 0.30 0.40
-#>  tch      teacher1    0.09704  0.3115                 
-#>           teacher2    0.11321  0.3365   0.44          
-#>  class    (Intercept) 0.00000  0.0000                 
-#>  Residual             0.39044  0.6249                 
+#>  Groups   Name        Variance Std.Dev. Corr           
+#>  stu      trait1.t    0.24025  0.4902                  
+#>           trait2.t    0.16872  0.4108   0.86           
+#>           trait1.s    0.29588  0.5439   0.46 0.40      
+#>           trait2.s    0.37690  0.6139   0.20 0.30 0.40 
+#>  tch      teacher1    0.09704  0.3115                  
+#>           teacher2    0.11321  0.3365   0.44           
+#>  class    (Intercept) 0.00000  0.0000                  
+#>  Residual             0.39044  0.6249                  
 #> Number of obs: 54462, groups:  stu, 1249; tch, 390; class, 125
 #> 
 #> Fixed effects:

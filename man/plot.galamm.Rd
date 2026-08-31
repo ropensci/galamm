@@ -97,8 +97,8 @@ plot(mod, form = esteem ~ fitted(.), abline = c(0, 1))
 \code{\link[=residuals.galamm]{residuals.galamm()}} for extracting residuals and \code{\link[=plot]{plot()}} for the
 generic function.
 
-Other diagnostics: 
-\code{\link{qqmath.galamm}()}
+Other diagnostics:
+\code{\link[=qqmath.galamm]{qqmath.galamm()}}
 }
 \author{
 Douglas Bates, Martin Maechler, Ben Bolker, and Steven Walker, with

@@ -32,7 +32,7 @@ responses and one set of binomially distributed responses. The normally
 distributed response follow two different residual standard deviations.
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{diet}},
 \code{\link{epilep}},

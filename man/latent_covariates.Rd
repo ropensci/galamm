@@ -30,7 +30,7 @@ Simulated dataset for use in examples and testing with a latent covariate
 interacting with an observed covariate.
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{diet}},
 \code{\link{epilep}},

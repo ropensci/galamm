@@ -32,7 +32,7 @@ interacting with an observed covariate. In this data, each response has been
 measured six times for each subject.
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{diet}},
 \code{\link{epilep}},

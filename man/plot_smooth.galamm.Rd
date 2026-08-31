@@ -60,11 +60,11 @@ plot_smooth(mod, shade = TRUE, rug = FALSE)
 \insertAllCited{}
 }
 \seealso{
-Other summary functions: 
-\code{\link{anova.galamm}()},
-\code{\link{draw.galamm}()},
-\code{\link{print.galamm}()},
-\code{\link{print.summary.galamm}()},
-\code{\link{summary.galamm}()}
+Other summary functions:
+\code{\link[=anova.galamm]{anova.galamm()}},
+\code{\link[=draw.galamm]{draw.galamm()}},
+\code{\link[=print.galamm]{print.galamm()}},
+\code{\link[=print.summary.galamm]{print.summary.galamm()}},
+\code{\link[=summary.galamm]{summary.galamm()}}
 }
 \concept{summary functions}

@@ -47,7 +47,7 @@ mod_nm <- galamm(
 
 }
 \seealso{
-Other optimization functions: 
-\code{\link{galamm_control}()}
+Other optimization functions:
+\code{\link[=galamm_control]{galamm_control()}}
 }
 \concept{optimization functions}
