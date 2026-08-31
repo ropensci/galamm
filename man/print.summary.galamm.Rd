@@ -40,12 +40,12 @@ summary(mod)
 \code{\link[=summary.galamm]{summary.galamm()}} for the summary function and \code{\link[=print]{print()}} for the
 generic function.
 
-Other summary functions: 
-\code{\link{anova.galamm}()},
-\code{\link{draw.galamm}()},
-\code{\link{plot_smooth.galamm}()},
-\code{\link{print.galamm}()},
-\code{\link{summary.galamm}()}
+Other summary functions:
+\code{\link[=anova.galamm]{anova.galamm()}},
+\code{\link[=draw.galamm]{draw.galamm()}},
+\code{\link[=plot_smooth.galamm]{plot_smooth.galamm()}},
+\code{\link[=print.galamm]{print.galamm()}},
+\code{\link[=summary.galamm]{summary.galamm()}}
 }
 \author{
 Some of the code for producing summary information has been derived

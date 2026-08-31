@@ -65,10 +65,10 @@ mod <- galamm(
 \insertRef{woodGeneralizedAdditiveModels2017}{galamm}
 }
 \seealso{
-Other modeling functions: 
-\code{\link{galamm}()},
+Other modeling functions:
+\code{\link[=galamm]{galamm()}},
 \code{\link{galammObject}},
-\code{\link{gfam}()},
-\code{\link{s}()}
+\code{\link[=gfam]{gfam()}},
+\code{\link{s}}
 }
 \concept{modeling functions}

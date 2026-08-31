@@ -14,7 +14,7 @@ galamm_control(
 }
 \arguments{
 \item{optim_control}{List containing optimization parameters. If \code{method
-  = "L-BFGS-B"} it is passed on to \code{stats::optim}'s \code{control}
+= "L-BFGS-B"} it is passed on to \code{stats::optim}'s \code{control}
 argument and if \code{method = "Nelder-Mead"}, it is passed on to
 \code{lme4::Nelder_Mead}'s control argument. If not otherwise specified,
 and \code{method = "L-BFGS-B"}, the following arguments are set to
@@ -30,7 +30,7 @@ case sensitive.}
 
 \item{maxit_conditional_modes}{Maximum number of iterations in penalized
 iteratively reweighted least squares algorithm. Ignored if \code{family =
-  "gaussian"} for all observations, since then a single step gives the exact
+"gaussian"} for all observations, since then a single step gives the exact
 answer.}
 
 \item{pirls_tol_abs}{Absolute convergence criterion for penalized
@@ -77,7 +77,7 @@ control <- galamm_control(optim_control = list(trace = 6, lmm = 20))
 \seealso{
 \code{\link[=galamm]{galamm()}}
 
-Other optimization functions: 
-\code{\link{extract_optim_parameters.galamm}()}
+Other optimization functions:
+\code{\link[=extract_optim_parameters.galamm]{extract_optim_parameters.galamm()}}
 }
 \concept{optimization functions}

@@ -1,17 +1,22 @@
-old_wd <- getwd()
+knit_vignettes <- function() {
+  old_wd <- getwd()
+  do.call(on.exit, list(bquote(setwd(.(old_wd))), add = TRUE))
+  setwd("vignettes-raw/")
 
-setwd("vignettes-raw/")
-knitr::knit("lmm_factor.Rmd", output = "../vignettes/lmm_factor.Rmd")
-knitr::knit("glmm_factor.Rmd", output = "../vignettes/glmm_factor.Rmd")
-knitr::knit("mixed_response.Rmd", output = "../vignettes/mixed_response.Rmd")
-knitr::knit("lmm_heteroscedastic.Rmd", output = "../vignettes/lmm_heteroscedastic.Rmd")
-knitr::knit("semiparametric.Rmd", output = "../vignettes/semiparametric.Rmd")
-knitr::knit("optimization.Rmd", output = "../vignettes/optimization.Rmd")
-knitr::knit("latent_observed_interaction.Rmd", output = "../vignettes/latent_observed_interaction.Rmd")
-knitr::knit("scaling.Rmd", output = "../vignettes/scaling.Rmd")
-knitr::knit("posterior_sampling.Rmd", output = "../vignettes/posterior_sampling.Rmd")
+  knitr::opts_chunk$set(error = FALSE)
 
-imgs <- list.files(pattern = "\\.png$")
-imgs_new <- file.path("..", "vignettes", imgs)
-file.rename(imgs, imgs_new)
-setwd(old_wd)
+  files <- c("lmm_factor", "glmm_factor", "mixed_response",
+             "lmm_heteroscedastic", "semiparametric", "optimization",
+             "latent_observed_interaction", "scaling", "posterior_sampling")
+
+  for (f in files) {
+    message("knitting ", f)
+    knitr::knit(paste0(f, ".Rmd"),
+                output = file.path("..", "vignettes", paste0(f, ".Rmd")),
+                envir = new.env(parent = globalenv()))
+  }
+
+  imgs <- list.files(pattern = "\\.png$")
+  ok <- file.rename(imgs, file.path("..", "vignettes", imgs))
+  if (!all(ok)) stop("failed to move: ", paste(imgs[!ok], collapse = ", "))
+}

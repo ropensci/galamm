@@ -30,8 +30,8 @@ qqmath(mod)
 
 }
 \seealso{
-Other diagnostics: 
-\code{\link{plot.galamm}()}
+Other diagnostics:
+\code{\link[=plot.galamm]{plot.galamm()}}
 }
 \author{
 This function is derived from \code{lme4:::qqmath.merMod}, written by

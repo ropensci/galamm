@@ -37,7 +37,7 @@ explanatory variable x.
 \insertAllCited{}
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{diet}},
 \code{\link{epilep}},
 \code{\link{hsced}},

@@ -27,7 +27,7 @@ Very basic mixed response dataset with one set of normally distributed
 responses and one set of binomially distributed responses.
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{diet}},
 \code{\link{epilep}},

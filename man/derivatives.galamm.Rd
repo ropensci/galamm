@@ -32,27 +32,27 @@ draw(dd)
 
 }
 \seealso{
-Other details of model fit: 
-\code{\link{VarCorr}()},
-\code{\link{appraise.galamm}()},
-\code{\link{coef.galamm}()},
-\code{\link{confint.galamm}()},
-\code{\link{deviance.galamm}()},
-\code{\link{factor_loadings.galamm}()},
-\code{\link{family.galamm}()},
-\code{\link{fitted.galamm}()},
-\code{\link{fixef}()},
-\code{\link{formula.galamm}()},
-\code{\link{llikAIC}()},
-\code{\link{logLik.galamm}()},
-\code{\link{model.frame.galamm}()},
-\code{\link{nobs.galamm}()},
-\code{\link{predict.galamm}()},
-\code{\link{print.VarCorr.galamm}()},
-\code{\link{ranef.galamm}()},
-\code{\link{residuals.galamm}()},
-\code{\link{response}()},
-\code{\link{sigma.galamm}()},
-\code{\link{vcov.galamm}()}
+Other details of model fit:
+\code{\link{VarCorr}},
+\code{\link[=appraise.galamm]{appraise.galamm()}},
+\code{\link[=coef.galamm]{coef.galamm()}},
+\code{\link[=confint.galamm]{confint.galamm()}},
+\code{\link[=deviance.galamm]{deviance.galamm()}},
+\code{\link[=factor_loadings.galamm]{factor_loadings.galamm()}},
+\code{\link[=family.galamm]{family.galamm()}},
+\code{\link[=fitted.galamm]{fitted.galamm()}},
+\code{\link{fixef}},
+\code{\link[=formula.galamm]{formula.galamm()}},
+\code{\link[=llikAIC]{llikAIC()}},
+\code{\link[=logLik.galamm]{logLik.galamm()}},
+\code{\link[=model.frame.galamm]{model.frame.galamm()}},
+\code{\link[=nobs.galamm]{nobs.galamm()}},
+\code{\link[=predict.galamm]{predict.galamm()}},
+\code{\link[=print.VarCorr.galamm]{print.VarCorr.galamm()}},
+\code{\link[=ranef.galamm]{ranef.galamm()}},
+\code{\link[=residuals.galamm]{residuals.galamm()}},
+\code{\link[=response]{response()}},
+\code{\link[=sigma.galamm]{sigma.galamm()}},
+\code{\link[=vcov.galamm]{vcov.galamm()}}
 }
 \concept{details of model fit}

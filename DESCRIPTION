@@ -52,7 +52,6 @@ LinkingTo:
     RcppEigen
 LazyData: true
 Roxygen: list(markdown = TRUE, roclets = c ("namespace", "rd", "srr::srr_stats_roclet"))
-RoxygenNote: 7.3.3
 Suggests:
     covr,
     gamm4,
@@ -66,3 +65,4 @@ VignetteBuilder: knitr, rmarkdown
 RdMacros: Rdpack
 NeedsCompilation: yes
 SystemRequirements: C++17
+Config/roxygen2/version: 8.1.0

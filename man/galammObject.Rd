@@ -28,7 +28,7 @@ smooth terms.
 \item \code{fit}: fitted values.
 \item \code{fit_population}: fitted values excluding random effects.
 \item \code{hessian}: Hessian matrix of the final model.
-\item \code{lmod}: linear model object from \code{\link[lme4:modular]{lme4::lFormula()}}.
+\item \code{lmod}: linear model object from \code{\link[lme4:lFormula]{lme4::lFormula()}}.
 \item \code{loglik}: log-likelihood of the final model.
 \item \code{n}: number of observations.
 \item \code{pearson_residual}: Pearson residuals.
@@ -53,10 +53,10 @@ smooth terms.
 }
 
 \seealso{
-Other modeling functions: 
-\code{\link{galamm}()},
-\code{\link{gfam}()},
-\code{\link{s}()},
-\code{\link{t2}()}
+Other modeling functions:
+\code{\link[=galamm]{galamm()}},
+\code{\link[=gfam]{gfam()}},
+\code{\link{s}},
+\code{\link{t2}}
 }
 \concept{modeling functions}

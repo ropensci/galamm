@@ -49,26 +49,34 @@ export(t2)
 export(t2l)
 importFrom(Rcpp,sourceCpp)
 importFrom(Rdpack,reprompt)
-importFrom(gratia,appraise)
-importFrom(gratia,derivatives)
-importFrom(gratia,draw)
+importFrom(gratia,
+  appraise,
+  derivatives,
+  draw
+)
 importFrom(lattice,qqmath)
-importFrom(mgcv,s)
-importFrom(mgcv,t2)
-importFrom(nlme,VarCorr)
-importFrom(nlme,fixef)
-importFrom(nlme,ranef)
-importFrom(stats,anova)
-importFrom(stats,coef)
-importFrom(stats,deviance)
-importFrom(stats,family)
-importFrom(stats,fitted)
-importFrom(stats,formula)
-importFrom(stats,gaussian)
-importFrom(stats,logLik)
-importFrom(stats,nobs)
-importFrom(stats,predict)
-importFrom(stats,residuals)
-importFrom(stats,sigma)
-importFrom(stats,vcov)
+importFrom(mgcv,
+  s,
+  t2
+)
+importFrom(nlme,
+  VarCorr,
+  fixef,
+  ranef
+)
+importFrom(stats,
+  anova,
+  coef,
+  deviance,
+  family,
+  fitted,
+  formula,
+  gaussian,
+  logLik,
+  nobs,
+  predict,
+  residuals,
+  sigma,
+  vcov
+)
 useDynLib(galamm, .registration = TRUE)

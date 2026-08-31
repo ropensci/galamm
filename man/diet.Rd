@@ -45,7 +45,7 @@ dataset is used. See also
 \insertAllCited{}
 }
 \seealso{
-Other datasets: 
+Other datasets:
 \code{\link{cognition}},
 \code{\link{epilep}},
 \code{\link{hsced}},
