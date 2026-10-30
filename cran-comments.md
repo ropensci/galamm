@@ -1,6 +1,6 @@
 ## Submission note
 
-Minor upgrade related to release on rOpenSci.
+Internal fix to comply with next release of RcppEigen.
 
 ## Test environments
 

@@ -1,3 +1,7 @@
+# galamm 0.4.2
+
+- internal change to be compatible with the latest version of RcppEigen.
+
 # galamm 0.4.1
 
 galamm has been peer reviewed and accepted by rOpenSci, and the repository has
