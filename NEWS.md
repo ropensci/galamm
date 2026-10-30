@@ -1,6 +1,7 @@
 # galamm 0.4.2
 
-- internal change to be compatible with the latest version of RcppEigen.
+- Internal change to be compatible with the latest version of RcppEigen.
+- Removed dead URL go GLLAMM website.
 
 # galamm 0.4.1
 
