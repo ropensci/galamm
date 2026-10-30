@@ -19,7 +19,7 @@
 #'   \item{lbas}{Logarithm of a quarter of the number of seizures in the eight
 #'   weeks preceding entry into the trial.}
 #' }
-#' @source <http://www.gllamm.org/books/readme.html#11.3>
+#' @source GLLAMM, Chapter 11.3.
 #' @family datasets
 #' @references \insertAllCited{}
 "epilep"
@@ -103,7 +103,7 @@
 #'   \item{fiber2}{Dummy variable indicating whether y is a fiber measurement
 #'   at timepoint 2.}
 #' }
-#' @source <http://www.gllamm.org/books/readme.html#14.2>
+#' @source GLLAMM, Chapter 14.2.
 #' @family datasets
 #' @references \insertAllCited{}
 "diet"
