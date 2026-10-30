@@ -28,7 +28,7 @@ at timepoint 2.}
 }
 }
 \source{
-\url{http://www.gllamm.org/books/readme.html#14.2}
+GLLAMM, Chapter 14.2.
 }
 \usage{
 diet

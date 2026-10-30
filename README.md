@@ -56,7 +56,7 @@ feasible with popular R packages like
 2015](#ref-batesFittingLinearMixedEffects2015)), and
 [OpenMx](https://openmx.ssri.psu.edu/) ([Neale et al.
 2016](#ref-nealeOpenMxExtendedStructural2016)), as well as the Stata
-based [GLLAMM](http://www.gllamm.org/) software ([Rabe-Hesketh et al.
+based GLLAMM software ([Rabe-Hesketh et al.
 2004](#ref-rabe-heskethGeneralizedMultilevelStructural2004),
 [2005](#ref-rabe-heskethMaximumLikelihoodEstimation2005)). In
 particular, to maximally utilize large datasets available today, it is
