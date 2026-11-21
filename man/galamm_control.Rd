@@ -50,7 +50,7 @@ Object of class \code{galamm_control}, which typically will be
 provided as an argument to \code{\link{galamm}}.
 }
 \description{
-This function can be called for controling the optimization
+This function can be called for controlling the optimization
 procedure used when fitting GALAMMs using \code{\link{galamm}}.
 }
 \examples{
