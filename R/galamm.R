@@ -84,7 +84,7 @@
 #'   PLmixed::PLmixed() for linear mixed models with factor structures and
 #'   generalized linear mixed models with factor structures.
 #' @srrstats {G5.5} Random seed is set when simulating data, but the algorithms
-#'   are determinstic, and hence don't depend on random numbers.
+#'   are deterministic, and hence don't depend on random numbers.
 #' @srrstats {G5.6} Implemented in the tests, both through data simulated for
 #'   this package, and through simulated data from PLmixed and lme4.
 #' @srrstats {G5.6a} Tolerance in testthat() set to relatively high values,

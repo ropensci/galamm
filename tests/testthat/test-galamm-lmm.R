@@ -464,7 +464,7 @@ test_that("multiple factors in fixed effects works", {
 })
 
 
-#' @srrstats {G5.9b} Algorithms are determinstic, so changing random seeds does
+#' @srrstats {G5.9b} Algorithms are deterministic, so changing random seeds does
 #'   not affect the results. This is tested here.
 #' @srrstats {G5.9} Noise susceptibility tests here.
 #' @srrstats {G5.9a} Adding trivial noise and testing here.

@@ -1,6 +1,6 @@
 #' @title Control values for galamm fit
 #'
-#' @description This function can be called for controling the optimization
+#' @description This function can be called for controlling the optimization
 #' procedure used when fitting GALAMMs using \code{\link{galamm}}.
 #'
 #' @srrstats {G1.4} Function documented with roxygen2.
